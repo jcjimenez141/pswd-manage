@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public enum ActionTypes {
-	DEL("Delete"), INS("Insert"), ENC("Encrypt"), DEC("Decrypt"), IGN("Ignore");
+	DEL("Delete"), INS("Insert"), UPD("Update"), IGN("Ignore");
 	
 	private final String actionType;
 	
@@ -20,14 +20,11 @@ public enum ActionTypes {
 				return DEL;
 			} else if(act.equalsIgnoreCase("Insert")) {
 				return INS;
-			} else if(act.equalsIgnoreCase("Encrypt")) {
-				return ENC;
-			} else if(act.equalsIgnoreCase("Decrypt")) {
-				return DEC;
+			} else if(act.equalsIgnoreCase("Update")) {
+				return UPD;
 			} else if(act.equalsIgnoreCase("Ignore")) {
 				return IGN;
 			}
-			
 		} 	
 		
 		return IGN;
